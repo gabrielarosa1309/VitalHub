@@ -11,7 +11,24 @@ import VerifyEmail from "./src/screens/VerifyEmail";
 //instância do StackNavigator
 const Stack = createNativeStackNavigator();
 
+//import das fonts
+import { useFonts, MontserratAlternates_700Bold, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium } from "@expo-google-fonts/montserrat-alternates";
+import { Quicksand_500Medium, Quicksand_600SemiBold } from "@expo-google-fonts/quicksand";
+
 export default function App() {
+
+  const[fontsLoaded, fontsError] = useFonts({
+    MontserratAlternates_700Bold,
+    MontserratAlternates_600SemiBold,
+    MontserratAlternates_500Medium,
+    Quicksand_500Medium,
+    Quicksand_600SemiBold
+  })
+
+  if(!fontsLoaded && !fontsError){
+    return null;
+  }
+
   return(
     //Estrutura da navegação
     <NavigationContainer>

@@ -1,10 +1,36 @@
-import { View, Text } from "react-native";
+import { Container } from "../components/Container/Style";
+import { DefaultText, DefaultTextBlue, TextBox } from "../components/DefaultText/Style";
+import { ButtonReset, ButtonTxt } from "../components/EntryButton/Style";
+import { InputBoxVerify, InputVerify } from "../components/Input/Style";
+import { LinkCancel } from "../components/Links/Style";
+import { Logo } from "../components/Logo/Style";
+import { Title } from "../components/Title/Style";
 
-export const VerifyEmail = ({verifyEmail}) => {
+export const VerifyEmail = () => {
     return (
-        <View style={{flex: 1, alignItems: "center", justifyContent: "Center"}}>
-            <Text> Ebaaa </Text>
-        </View>
+        <Container>
+            <Logo source={require("../assets/img/VitalHub_Logo1.png")} />
+
+            <Title> Verifique seu e-mail </Title>
+
+            <TextBox>
+                <DefaultText> Digite o código de 4 dígitos enviado para </DefaultText>
+                <DefaultTextBlue> username@email.com </DefaultTextBlue>
+            </TextBox>
+
+            <InputBoxVerify>
+                <InputVerify>0</InputVerify>
+                <InputVerify>0</InputVerify>
+                <InputVerify>0</InputVerify>
+                <InputVerify>0</InputVerify>
+            </InputBoxVerify>
+
+            <ButtonReset>
+                <ButtonTxt> ENTRAR </ButtonTxt>
+            </ButtonReset>
+
+            <LinkCancel>Reenviar código</LinkCancel>
+        </Container>
     );
 }
 export default VerifyEmail;
