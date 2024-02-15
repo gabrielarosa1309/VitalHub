@@ -15,3 +15,9 @@ export const DefaultText = styled.Text`
 export const DefaultTextBlue = styled(DefaultText)`
     color: #607EC5;
 `
+export const DefaultTextCard = styled(DefaultText)`
+    color: #4E4B59;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 10px;
+`
