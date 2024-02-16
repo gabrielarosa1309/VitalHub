@@ -21,6 +21,34 @@ export const InputVerify = styled(Input)`
 `
 export const InputBoxVerify = styled.View`
     flex-direction: row;
-    gap: 20px
+    gap: 20px;
+`
+
+export const BoxInput = styled.View`
+    width: 90%;
+    height: 73px;
+    margin: 24px 0px;
+    gap: 10px;
+`
+export const DirectionRow = styled(BoxInput)`
+    flex-direction: row;
+    width: 90%;
+`
+export const BoxInputRow = styled(BoxInput)`
+    margin: 0px 0px 30px 0px;
+    width: 50%;
+`
+export const InputBody = styled.TextInput`
+    height: 53px;
+    padding: 16px;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    color: #34898f;
+    font-family: "MontserratAlternates_500Medium";
+    font-size: 16px;
+`
+export const InputBodyRow = styled(InputBody)`
+    width: 95%;
+    background-color: #FFFFFF;
 `
 

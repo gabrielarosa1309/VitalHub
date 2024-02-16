@@ -9,6 +9,7 @@ import SetPassword from "./src/screens/SetPassword";
 import VerifyEmail from "./src/screens/VerifyEmail";
 import SelectClinic from "./src/screens/SelectClinic";
 import SelectDoctor from "./src/screens/SelectDoctor";
+import PatientProfile from "./src/screens/PatientProfile";
 
 //instância do StackNavigator
 const Stack = createNativeStackNavigator();
@@ -90,6 +91,12 @@ export default function App() {
           name="SelectDoctor" //nome da tela
           component={SelectDoctor} //componente q será chamado
           options={{title: 'SelectDoctor'}} //titulo da tela
+        />
+
+        <Stack.Screen
+          name="PatientProfile" //nome da tela
+          component={PatientProfile} //componente q será chamado
+          options={{title: 'PatientProfile'}} //titulo da tela
         />
 
       </Stack.Navigator>

@@ -5,7 +5,7 @@ export const Card = styled.View`
     height: 13%;
     flex-direction: row;
     border: 2px;
-    /* border-color: #496BBA; */
+    border-color: #496BBA;
     flex-wrap: wrap;
     margin-top: 12px;
     border-radius: 5px;
@@ -22,6 +22,7 @@ export const DocImgCard = styled.Image`
 `
 export const CardColumn= styled.View`
     width: 50%;
+    padding: 20px;
 `
 export const CardColumn2= styled(CardColumn)`
     align-items: flex-end;
@@ -59,4 +60,24 @@ export const AppDatesText = styled.Text`
     color: #49B3BA;
     font-family: "Quicksand_600SemiBold";
     font-size: 16px;
+`
+
+export const CardPatient = styled.View`
+    width: 90%;
+    height: 13%;
+    border: 2px;
+    border-color: #496BBA;
+    border-radius: 5px;
+    margin-bottom: 20px;
+`
+export const CardPatientColumnImg = styled.View`
+    width: 30%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+`
+export const ImgCardPacient = styled.Image`
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
 `
