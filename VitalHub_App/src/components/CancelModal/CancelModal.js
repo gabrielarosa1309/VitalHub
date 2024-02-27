@@ -1,5 +1,5 @@
 import { Modal } from "react-native"
-import { Button, ButtonTxt } from "../EntryButton/Style";
+import { ButtonTxt } from "../EntryButton/Style";
 import { Title } from "../Title/Style";
 import { LinkCancel } from "../Links/Style";
 import { BtnModal, ModalContent, ModalTxt, PatientModal } from "./Style";

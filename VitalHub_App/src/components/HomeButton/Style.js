@@ -30,3 +30,4 @@ export const ButtonRowHome = styled.View`
     margin-bottom: 24px;
     width: 90%;
 `
+

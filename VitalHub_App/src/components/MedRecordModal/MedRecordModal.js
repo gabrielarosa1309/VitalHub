@@ -12,13 +12,13 @@ const MedRecordModal = ({
 
             <PatientModal>
                 <ModalContent>
-                    <PatientImg source={{ uri: "https://media.licdn.com/dms/image/D4D03AQG0nv4NDnOLtw/profile-displayphoto-shrink_400_400/0/1698662360927?e=1714003200&v=beta&t=tg-8mLITd-8ir9g5P_-bbxiVFg1Gg2Ioxgj5ofJYbpU" }} />
+                    <PatientImg source={require("../../assets/img/chewie.jpg")} />
 
-                    <PatientName> Gabi </PatientName>
+                    <PatientName> Chewie </PatientName>
 
                     <ProfileData>
-                        <ContentTxt>18 anos</ContentTxt>
-                        <ContentTxt>gabi@email.com</ContentTxt>
+                        <ContentTxt>6 anos</ContentTxt>
+                        <ContentTxt>chewie@email.com</ContentTxt>
                     </ProfileData>
 
                     <BtnModal>

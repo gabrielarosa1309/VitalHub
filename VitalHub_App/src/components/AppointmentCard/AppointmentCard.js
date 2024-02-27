@@ -23,15 +23,15 @@ export const AppointmentCard = ({
     // container principal
     <ContainerCardsList>
       {/* imagem de perfil */}
-      <ProfileImage source={{ uri: "https://media.licdn.com/dms/image/D4D03AQG0nv4NDnOLtw/profile-displayphoto-shrink_400_400/0/1698662360927?e=1714003200&v=beta&t=tg-8mLITd-8ir9g5P_-bbxiVFg1Gg2Ioxgj5ofJYbpU" }} />
+      <ProfileImage source={require("../../assets/img/chewie.jpg")} />
 
       {/* conteúdo ao lado da imagem de perfil */}
       <ContentCard>
         <DataProfileCard>
-          <ProfileName>Gabi</ProfileName>
+          <ProfileName>Chewie</ProfileName>
 
           <ProfileData>
-            <TextAge>18 anos</TextAge>
+            <TextAge>6 anos</TextAge>
             <TextBold>Rotina</TextBold>
           </ProfileData>
         </DataProfileCard>

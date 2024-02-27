@@ -8,11 +8,16 @@ import { ListComponent } from "../components/List/List";
 import { AppointmentCard } from "../components/AppointmentCard/AppointmentCard";
 import CancelModal from "../components/CancelModal/CancelModal";
 import MedRecordModal from "../components/MedRecordModal/MedRecordModal";
+import AppointmentModal from "../components/AppointmentModal/AppointmentModal";
+import AppointmentButton from "../components/AppointmentButton/AppointmentButton";
 
 const Consultas = [
-    {id: 1, nome: "Carlos", situacao: "pendente"},
-    {id: 2, nome: "Edu", situacao: "realizado"},
-    {id: 3, nome: "Lucão", situacao: "cancelado"}
+    {id: 1, situacao: "pendente"},
+    {id: 2, situacao: "realizado"},
+    {id: 3, situacao: "pendente"},
+    {id: 4, situacao: "realizado"},
+    {id: 5, situacao: "realizado"},
+    {id: 6, situacao: "cancelado"}
 ]
 
 export const Home = () => {
@@ -21,6 +26,7 @@ export const Home = () => {
 
     const[showModalAppointment, setShowModalAppointment] = useState(false);
     const[showModalCancel, setShowModalCancel] = useState(false);
+    const[showModalApp, setShowModalApp] = useState(false);
 
     return (
         <Container>
@@ -68,6 +74,8 @@ export const Home = () => {
                 }
             />
 
+            <AppointmentButton onPress={() => setShowModalApp(true)} />
+            
             <CancelModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
@@ -76,6 +84,11 @@ export const Home = () => {
             <MedRecordModal
                 visible={showModalAppointment}
                 setShowModalAppointment={setShowModalAppointment}
+            />
+
+            <AppointmentModal
+                visible={showModalApp}
+                setShowModalApp={setShowModalApp}
             />
 
         </Container>
