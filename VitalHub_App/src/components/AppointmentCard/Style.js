@@ -3,6 +3,7 @@ import { Title } from "../Title/Style";
 
 export const ContainerCardsList = styled.View`
     width: 100%;
+    margin: 0 auto;
     margin-bottom:12px;
     padding: 10px 10px;
     border-radius: 5px;
@@ -10,14 +11,12 @@ export const ContainerCardsList = styled.View`
     background-color:#fff;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.08);
     gap: 10px;
-    margin: 0 auto;
 `
 export const ProfileImage = styled.Image`
     width: 77px;
     height: 80px;
     border-radius: 5px;
 `
-
 export const ContentCard = styled.View`
     width: 70%;
 `

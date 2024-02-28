@@ -58,6 +58,13 @@ const AppointmentModal = ({
                         </Select>
                     </SelectBox>
 
+                    <SelectBox>
+                        <TitleInput> Informe a data e o horário </TitleInput>
+                        <Select>
+                            <SelectTitle> Selecionar data e horário </SelectTitle>
+                        </Select>
+                    </SelectBox>
+
                     <BtnModal>
                         <ButtonTxt> Confirmar </ButtonTxt>
                     </BtnModal>

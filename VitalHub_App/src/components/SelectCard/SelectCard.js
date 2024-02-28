@@ -1,7 +1,12 @@
 import { AntDesign, Entypo } from '@expo/vector-icons';
 import { ClinicAddress, ClinicName, ClockCard, ContainerCardsList, ContentCard, DataClinicCard, IconsColumn, Rate, TextBold, TextBoldRate } from './Style';
 
-export const SelectCard = () => {
+export const SelectCard = ({
+    clinicName,
+    clinicAddress,
+    rate,
+    disponibility
+}) => {
     return (
         // container principal
         <ContainerCardsList>
@@ -9,8 +14,8 @@ export const SelectCard = () => {
             <ContentCard>
                 {/* conteúdo da direita */}
                 <DataClinicCard>
-                    <ClinicName> Clínica Natureh </ClinicName>
-                    <ClinicAddress> São Paulo, SP </ClinicAddress>
+                    <ClinicName> {clinicName} </ClinicName>
+                    <ClinicAddress> {clinicAddress} </ClinicAddress>
                 </DataClinicCard>
 
                 {/* conteúdo da esquerda */}
@@ -18,11 +23,11 @@ export const SelectCard = () => {
                     <Rate>
                         <Entypo
                             name="star"
-                            size={24}
+                            size={14}
                             color={"#F9A620"}
                         />
 
-                        <TextBoldRate> 4,5 </TextBoldRate>
+                        <TextBoldRate> {rate} </TextBoldRate>
                     </Rate>
 
                     <ClockCard>
@@ -32,7 +37,7 @@ export const SelectCard = () => {
                             color={"#49B3BA"}
                         />
 
-                        <TextBold> Seg-Sex </TextBold>
+                        <TextBold> {disponibility} </TextBold>
                     </ClockCard>
                 </IconsColumn>
             </ContentCard>

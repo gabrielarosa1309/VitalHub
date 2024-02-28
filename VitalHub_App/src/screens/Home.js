@@ -13,11 +13,13 @@ import AppointmentButton from "../components/AppointmentButton/AppointmentButton
 
 const Consultas = [
     {id: 1, situacao: "pendente"},
-    {id: 2, situacao: "realizado"},
+    {id: 2, situacao: "pendente"},
     {id: 3, situacao: "pendente"},
     {id: 4, situacao: "realizado"},
-    {id: 5, situacao: "realizado"},
-    {id: 6, situacao: "cancelado"}
+    {id: 5, situacao: "pendente"},
+    {id: 6, situacao: "realizado"},
+    {id: 7, situacao: "realizado"},
+    {id: 8, situacao: "cancelado"}
 ]
 
 export const Home = () => {
