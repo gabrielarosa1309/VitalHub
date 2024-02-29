@@ -16,7 +16,7 @@ const Stack = createNativeStackNavigator();
 
 //import das fonts
 import { useFonts, MontserratAlternates_700Bold, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium } from "@expo-google-fonts/montserrat-alternates";
-import { Quicksand_400Regular, Quicksand_500Medium, Quicksand_600SemiBold } from "@expo-google-fonts/quicksand";
+import { Quicksand_400Regular, Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_700Bold } from "@expo-google-fonts/quicksand";
 
 export default function App() {
 
@@ -26,7 +26,8 @@ export default function App() {
     MontserratAlternates_500Medium,
     Quicksand_400Regular,
     Quicksand_500Medium,
-    Quicksand_600SemiBold
+    Quicksand_600SemiBold,
+    Quicksand_700Bold
   })
 
   if(!fontsLoaded && !fontsError){

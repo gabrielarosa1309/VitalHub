@@ -7,11 +7,13 @@ import { ButtonTxt } from "../EntryButton/Style";
 import { useState } from "react";
 import { ButtonRowAppointment } from "../AppButton/Style";
 import { AppButton } from "../AppButton/AppButton";
+import AppResumeModal from "../AppResumeModal/AppResumeModal";
 
 const AppointmentModal = ({
     visible, setShowModalApp, ...rest
 }) => {
     const [statusLista, setStatusLista] = useState("pendente");
+    const [showAppResume, setShowAppResume] = useState(false);
 
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
@@ -65,7 +67,12 @@ const AppointmentModal = ({
                         </Select>
                     </SelectBox>
 
-                    <BtnModal>
+                    <AppResumeModal
+                        visible={showAppResume}
+                        setShowAppResume={setShowAppResume}
+                    />
+
+                    <BtnModal onPress={() => setShowAppResume(true)}>
                         <ButtonTxt> Confirmar </ButtonTxt>
                     </BtnModal>
 
