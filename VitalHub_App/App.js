@@ -17,6 +17,9 @@ const Stack = createNativeStackNavigator();
 //import das fonts
 import { useFonts, MontserratAlternates_700Bold, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium } from "@expo-google-fonts/montserrat-alternates";
 import { Quicksand_400Regular, Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_700Bold } from "@expo-google-fonts/quicksand";
+import SelectDate from "./src/screens/SelectDate";
+import HomeMed from "./src/screens/HomeMed";
+import InsertMedRecord from "./src/screens/InsertMedRecord";
 
 export default function App() {
 
@@ -60,6 +63,12 @@ export default function App() {
         />
 
         <Stack.Screen
+          name="HomeMed" //nome da tela
+          component={HomeMed} //componente q será chamado
+          options={{title: 'HomeMed'}} //titulo da tela
+        />
+
+        <Stack.Screen
           name="CreateAccount" //nome da tela
           component={CreateAccount} //componente q será chamado
           options={{title: 'CreateAccount'}} //titulo da tela
@@ -93,6 +102,18 @@ export default function App() {
           name="SelectDoctor" //nome da tela
           component={SelectDoctor} //componente q será chamado
           options={{title: 'SelectDoctor'}} //titulo da tela
+        />
+
+        <Stack.Screen
+          name="SelectDate" //nome da tela
+          component={SelectDate} //componente q será chamado
+          options={{title: 'SelectDate'}} //titulo da tela
+        />
+
+        <Stack.Screen
+          name="InsertMedRecord" //nome da tela
+          component={InsertMedRecord} //componente q será chamado
+          options={{title: 'InsertMedRecord'}} //titulo da tela
         />
 
         <Stack.Screen

@@ -23,12 +23,25 @@ export const InputBoxVerify = styled.View`
     flex-direction: row;
     gap: 20px;
 `
-
+export const InputInsert = styled(Input)`
+    width: 100%;
+    margin: 0px;
+`
+export const BigInputInsert = styled(Input)`
+    width: 100%;
+    height: 120px;
+    margin: 0px;
+`
 export const BoxInput = styled.View`
     width: 90%;
     height: 73px;
     margin: 24px 0px;
     gap: 10px;
+`
+export const BoxInputMed = styled(BoxInput)`
+    gap: 10px;
+    height: auto;
+    margin: 10px 0px;
 `
 export const DirectionRow = styled(BoxInput)`
     flex-direction: row;
@@ -51,4 +64,3 @@ export const InputBodyRow = styled(InputBody)`
     width: 95%;
     background-color: #FFFFFF;
 `
-

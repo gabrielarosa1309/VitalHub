@@ -2,12 +2,13 @@ import { Modal } from "react-native";
 import { BtnModal } from "../CancelModal/Style";
 import { LinkCancel } from "../Links/Style";
 import { Title, TitleInput } from "../Title/Style";
-import { AppModal, ModalContent, RowButtons, Select, SelectBox, SelectTitle } from "./Style";
+import { AppModal, ModalContent, SelectBox } from "./Style";
 import { ButtonTxt } from "../EntryButton/Style";
 import { useState } from "react";
 import { ButtonRowAppointment } from "../AppButton/Style";
 import { AppButton } from "../AppButton/AppButton";
 import AppResumeModal from "../AppResumeModal/AppResumeModal";
+import {InputInsert } from "../Input/Style";
 
 const AppointmentModal = ({
     visible, setShowModalApp, ...rest
@@ -48,11 +49,9 @@ const AppointmentModal = ({
 
                     <SelectBox>
                         <TitleInput> Informe a localização </TitleInput>
-                        <Select>
-                            <SelectTitle> Selecionar clínica </SelectTitle>
-                        </Select>
+                        <InputInsert placeholder="Digite a localização" />
                     </SelectBox>
-
+{/* 
                     <SelectBox>
                         <TitleInput> Informe o médico </TitleInput>
                         <Select>
@@ -65,7 +64,7 @@ const AppointmentModal = ({
                         <Select>
                             <SelectTitle> Selecionar data e horário </SelectTitle>
                         </Select>
-                    </SelectBox>
+                    </SelectBox> */}
 
                     <AppResumeModal
                         visible={showAppResume}
