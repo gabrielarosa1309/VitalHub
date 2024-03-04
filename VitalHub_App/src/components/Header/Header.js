@@ -1,21 +1,28 @@
-import { View, Image } from "react-native";
-import { BoxUser, GradientBackground, HomeHeader, TextHome, TitleWhite, UserIcon } from "../Header/Style";
-import { ContainerUser } from "../Container/Style";
+import { View } from "react-native";
+import { BoxNotif, BoxUser, GradientBackground, HomeHeader, TextHome, TitleWhite, UserIcon } from "../Header/Style";
+import { Octicons } from '@expo/vector-icons';
 
-export const Header = () => {
+export const Header = ({
+    img,
+    name
+}) => {
     return (
 
         <GradientBackground>
             <HomeHeader>
                 <BoxUser>
-                    <UserIcon source={require('../../assets/img/medico4.png')} />
+                    <UserIcon source={img} />
                     <View>
                         <TextHome>Bem-vindo</TextHome>
-                        <TitleWhite>Dr. Claudio</TitleWhite>
+                        <TitleWhite>{name}</TitleWhite>
                     </View>
                 </BoxUser>
 
-                <Image style={{ marginLeft: 90 }} source={require('../../assets/icons/bell.png')} />
+                <Octicons
+                    name="bell-fill"
+                    size={24}
+                    color="white"
+                />
             </HomeHeader>
         </GradientBackground>
 

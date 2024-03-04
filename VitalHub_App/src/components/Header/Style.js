@@ -8,7 +8,7 @@ export const HomeHeader = styled.View`
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 70px;
+  gap: 160px;
 `
 
 export const BoxUser = styled.View`
@@ -18,28 +18,28 @@ export const BoxUser = styled.View`
 `
 
 export const TextHome = styled.Text`
-    font-family: 'Quicksand_500Medium';
-    font-size: 16px;
-    color: #4E4B59;
+  font-family: 'Quicksand_500Medium';
+  font-size: 16px;
+  color: #4E4B59;
 `
 
 export const UserIcon = styled.Image`
-width: 60px;
-height: 60px;
-border-radius: 5px;
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
 `
 
 export const TitleWhite = styled.Text`
-    font-size: 20px;
-    color: #FBFBFB;
-    font-family: 'MontserratAlternates_600SemiBold';
-    margin-bottom: 5px;
+  font-size: 20px;
+  color: #FBFBFB;
+  font-family: 'MontserratAlternates_600SemiBold';
+  margin-bottom: 5px;
 `
 
 export const GradientBackground = styled(LinearGradient).attrs({
-    colors: ['#60BFC5', '#496BBA'],
-    start: { x: 0, y: 0 },
-    end: { x: 1, y: 1 }
+  colors: ['#60BFC5', '#496BBA'],
+  start: { x: 0, y: 0 },
+  end: { x: 1, y: 1 }
 })`
 
   width: 100%;

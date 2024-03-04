@@ -51,16 +51,15 @@ export const BoxInputRow = styled(BoxInput)`
     margin: 0px 0px 30px 0px;
     width: 50%;
 `
-export const InputBody = styled.TextInput`
-    height: 53px;
+export const InputBlock = styled.Text`
+    height: auto;
     padding: 16px;
-    background-color: #FFFFFF;
+    background-color: #F5F3F3;
     border-radius: 5px;
-    color: #34898f;
+    color: #33303E;
     font-family: "MontserratAlternates_500Medium";
     font-size: 16px;
 `
-export const InputBodyRow = styled(InputBody)`
+export const InputBodyRow = styled(InputBlock)`
     width: 95%;
-    background-color: #FFFFFF;
 `

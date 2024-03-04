@@ -1,8 +1,9 @@
 import { Modal } from "react-native";
-import { LinkCancel } from "../Links/Style";
 import { BtnModal, ModalContent, PatientModal } from "../CancelModal/Style";
+import { ContentTxt, PatientImg, PatientName } from "../MedRecordModal/Style";
+import { ProfileData } from "../PatientAppCard/Style";
 import { ButtonTxt } from "../EntryButton/Style";
-import { ContentTxt, PatientImg, PatientName, ProfileData } from "./Style";
+import { LinkCancel } from "../Links/Style";
 
 const MedModal = ({
     visible, setShowMedModal, ...rest
@@ -12,9 +13,9 @@ const MedModal = ({
 
             <PatientModal>
                 <ModalContent>
-                    <PatientImg source={require("../../assets/img/chewie.jpg")} />
+                    <PatientImg source={require("../../assets/img/medico4.jpg")} />
 
-                    <PatientName> Chewie </PatientName>
+                    <PatientName> Dr. Claudio </PatientName>
 
                     <ProfileData>
                         <ContentTxt>Clínico geral</ContentTxt>

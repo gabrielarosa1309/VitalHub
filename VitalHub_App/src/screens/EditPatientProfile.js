@@ -1,10 +1,11 @@
 import { Container } from "../components/Container/Style";
 import { Button, ButtonTxt } from "../components/EntryButton/Style";
 import { ImgProfile } from "../components/ImgProfile/Style";
-import { BoxInput, BoxInputRow, DirectionRow, InputBlock, InputBodyRow } from "../components/Input/Style";
+import { BoxInput, BoxInputRow, DirectionRow, InputBlock, InputBodyRow, InputInsert } from "../components/Input/Style";
+import { LinkCancel } from "../components/Links/Style";
 import { Subtitle, Title, TitleInput } from "../components/Title/Style";
 
-export const PatientProfile = () => {
+export const EditPatientProfile = () => {
     return (
         <Container>
             {/* <ImgProfile source={require("../assets/img/paciente1.png")}/> */}
@@ -14,28 +15,28 @@ export const PatientProfile = () => {
 
             <BoxInput>
                 <TitleInput> Data de nascimento </TitleInput>
-                <InputBlock> 04/05/1999 </InputBlock>
+                <InputInsert placeholder="Insira sua data de nascimento" />
             </BoxInput>
 
             <BoxInput>
                 <TitleInput> CPF </TitleInput>
-                <InputBlock> 859******** </InputBlock>
+                <InputInsert placeholder="Insira seu cpf" />
             </BoxInput>
 
             <BoxInput>
                 <TitleInput> Endereço </TitleInput>
-                <InputBlock> Rua Vicenso Silva, 987 </InputBlock>
+                <InputInsert placeholder="Insira seu endereço" />
             </BoxInput>
 
             <DirectionRow>
                 <BoxInputRow>
                     <TitleInput> Cep </TitleInput>
-                    <InputBodyRow>06548-909</InputBodyRow>
+                    <InputInsert placeholder="Data de nascimento" />
                 </BoxInputRow>
 
                 <BoxInputRow>
                     <TitleInput> Cidade </TitleInput>
-                    <InputBodyRow>Moema-SP</InputBodyRow>
+                    <InputInsert placeholder="Cidade" />
                 </BoxInputRow>
             </DirectionRow>
 
@@ -46,8 +47,12 @@ export const PatientProfile = () => {
             <Button>
                 <ButtonTxt> EDITAR </ButtonTxt>
             </Button>
+
+            <LinkCancel>
+                Cancelar
+            </LinkCancel>
         
         </Container>
     );
 }
-export default PatientProfile;
+export default EditPatientProfile;

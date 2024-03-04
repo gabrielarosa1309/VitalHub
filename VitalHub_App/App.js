@@ -20,6 +20,9 @@ import { Quicksand_400Regular, Quicksand_500Medium, Quicksand_600SemiBold, Quick
 import SelectDate from "./src/screens/SelectDate";
 import HomeMed from "./src/screens/HomeMed";
 import InsertMedRecord from "./src/screens/InsertMedRecord";
+import Localization from "./src/screens/Localization";
+import MedPatientRecord from "./src/screens/MedPatientRecord";
+import EditPatientProfile from "./src/screens/EditPatientProfile";
 
 export default function App() {
 
@@ -120,6 +123,24 @@ export default function App() {
           name="PatientProfile" //nome da tela
           component={PatientProfile} //componente q será chamado
           options={{title: 'PatientProfile'}} //titulo da tela
+        />
+
+        <Stack.Screen
+          name="Localization" //nome da tela
+          component={Localization} //componente q será chamado
+          options={{title: 'Localization'}} //titulo da tela
+        />
+
+        <Stack.Screen
+          name="MedPatientRecord" //nome da tela
+          component={MedPatientRecord} //componente q será chamado
+          options={{title: 'MedPatientRecord'}} //titulo da tela
+        />
+
+        <Stack.Screen
+          name="EditPatientProfile" //nome da tela
+          component={EditPatientProfile} //componente q será chamado
+          options={{title: 'EditPatientProfile'}} //titulo da tela
         />
 
       </Stack.Navigator>

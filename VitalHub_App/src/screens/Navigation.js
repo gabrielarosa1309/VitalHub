@@ -40,6 +40,11 @@ export const Navigation = ({ navigation }) => {
             />
 
             <Button
+                title="MedPatientRecord"
+                onPress={() => navigation.navigate("MedPatientRecord")}
+            />
+
+            <Button
                 title="Home"
                 onPress={() => navigation.navigate("Home")}
             />
@@ -60,8 +65,18 @@ export const Navigation = ({ navigation }) => {
             />
 
             <Button
+                title="Localization"
+                onPress={() => navigation.navigate("Localization")}
+            />
+
+            <Button
                 title="PatientProfile"
                 onPress={() => navigation.navigate("PatientProfile")}
+            />
+
+            <Button
+                title="EditPatientProfile"
+                onPress={() => navigation.navigate("EditPatientProfile")}
             />
         </View>
     );

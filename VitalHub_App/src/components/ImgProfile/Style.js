@@ -5,3 +5,7 @@ export const ImgProfile = styled.Image`
     height: 280px;
     margin-bottom: 20px;
 `
+
+export const ImgLocal = styled(ImgProfile)`
+    height: 325px;
+`

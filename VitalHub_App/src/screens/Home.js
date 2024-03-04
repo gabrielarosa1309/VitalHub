@@ -5,35 +5,33 @@ import { useState } from "react";
 import { HomeButton } from "../components/HomeButton/HomeButton";
 import { ButtonRowHome } from "../components/HomeButton/Style";
 import { ListComponent } from "../components/List/List";
-import { AppointmentCard } from "../components/AppointmentCard/AppointmentCard";
 import CancelModal from "../components/CancelModal/CancelModal";
-import MedRecordModal from "../components/MedRecordModal/MedRecordModal";
 import AppointmentModal from "../components/AppointmentModal/AppointmentModal";
 import AppointmentButton from "../components/AppointmentButton/AppointmentButton";
+import { PatientAppCard } from "../components/PatientAppCard/PatientAppCard";
+import MedModal from "../components/MedModal/MedModal";
 
 const Consultas = [
-    {id: 1, situacao: "pendente"},
-    {id: 2, situacao: "pendente"},
-    {id: 3, situacao: "pendente"},
-    {id: 4, situacao: "realizado"},
-    {id: 5, situacao: "pendente"},
-    {id: 6, situacao: "realizado"},
-    {id: 7, situacao: "realizado"},
-    {id: 8, situacao: "cancelado"}
+    { id: 1, situacao: "pendente" },
+    { id: 4, situacao: "realizado" },
+    { id: 8, situacao: "cancelado" }
 ]
 
 export const Home = () => {
 
-    const[statusLista, setStatusLista] = useState("pendente");
+    const [statusLista, setStatusLista] = useState("pendente");
 
-    const[showModalAppointment, setShowModalAppointment] = useState(false);
-    const[showModalCancel, setShowModalCancel] = useState(false);
-    const[showModalApp, setShowModalApp] = useState(false);
+    const [showMedModal, setShowMedModal] = useState(false);
+    const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalApp, setShowModalApp] = useState(false);
 
     return (
         <Container>
 
-            <Header/>
+            <Header
+                img={require("../assets/img/chewie.jpg")}
+                name="Chewie"
+            />
 
             <CalendarList />
 
@@ -50,14 +48,14 @@ export const Home = () => {
                     clickButton={statusLista === "realizado"}
                     onPress={() => setStatusLista("realizado")}
                 />
-                
+
 
                 <HomeButton
                     textButton={"Canceladas"}
                     clickButton={statusLista === "cancelado"}
                     onPress={() => setStatusLista("cancelado")}
                 />
-                
+
 
             </ButtonRowHome>
 
@@ -65,11 +63,11 @@ export const Home = () => {
                 data={Consultas}
                 keyExtractor={(item) => item.id}
 
-                renderItem={({item}) =>
+                renderItem={({ item }) =>
                     statusLista == item.situacao && (
-                        <AppointmentCard
+                        <PatientAppCard
                             situacao={item.situacao}
-                            onPressAppointment={() => setShowModalAppointment(true)}
+                            onPressMedModal={() => setShowMedModal(true)}
                             onPressCancel={() => setShowModalCancel(true)}
                         />
                     )
@@ -77,15 +75,15 @@ export const Home = () => {
             />
 
             <AppointmentButton onPress={() => setShowModalApp(true)} />
-            
+
             <CancelModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
             />
 
-            <MedRecordModal
-                visible={showModalAppointment}
-                setShowModalAppointment={setShowModalAppointment}
+            <MedModal
+                visible={showMedModal}
+                setShowMedModal={setShowMedModal}
             />
 
             <AppointmentModal
