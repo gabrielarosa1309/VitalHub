@@ -10,7 +10,7 @@ export const Subtitle = styled.Text`
     font-size: 16px;
     color: #4E4B59;
     font-family: "Quicksand_500Medium";
-    margin-top: 10px;
+    margin-bottom: 10px;
 `
 export const TitleInput = styled(Subtitle)`
     color: #33303E;

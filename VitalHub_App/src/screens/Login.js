@@ -7,7 +7,11 @@ import { Button, ButtonTxt } from "../components/EntryButton/Style";
 import { GoogleButton, IconGoogleButton, TitleGoogleButton } from "../components/GoogleButton/Style";
 import { CreateAccount, LinkCreateAccount, TextCreateAccount } from "../components/CreateAccount/Style";
 
-export const Login = () => {
+export const Login = ({ navigation }) => {
+    async function Login() {
+        navigation.navigate("Main")
+    }
+
     return (
         <Container>
             <Logo source={require("../assets/img/VitalHub_Logo1.png")} />
@@ -20,7 +24,7 @@ export const Login = () => {
 
             <LinkMedium>Esqueceu sua senha?</LinkMedium>
 
-            <Button>
+            <Button onPress={() => Login}>
                 <ButtonTxt> ENTRAR </ButtonTxt>
             </Button>
 

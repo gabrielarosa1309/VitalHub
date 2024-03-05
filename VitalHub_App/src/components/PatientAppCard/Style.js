@@ -29,6 +29,7 @@ export const ProfileName = styled(Title)`
 export const ProfileData = styled.View`
     flex-direction: row;
     gap: 15px;
+    margin-bottom: 10px;
 `
 export const TextAge = styled.Text`
     font-size: 14px;

@@ -34,8 +34,8 @@ export const BigInputInsert = styled(Input)`
 `
 export const BoxInput = styled.View`
     width: 90%;
-    height: 73px;
-    margin: 24px 0px;
+    height: auto;
+    margin: 10px 0px;
     gap: 10px;
 `
 export const BoxInputMed = styled(BoxInput)`
@@ -46,6 +46,7 @@ export const BoxInputMed = styled(BoxInput)`
 export const DirectionRow = styled(BoxInput)`
     flex-direction: row;
     width: 90%;
+    margin-bottom: 0px;
 `
 export const BoxInputRow = styled(BoxInput)`
     margin: 0px 0px 30px 0px;
@@ -56,6 +57,24 @@ export const InputBlock = styled.Text`
     padding: 16px;
     background-color: #F5F3F3;
     border-radius: 5px;
+    color: #33303E;
+    font-family: "MontserratAlternates_500Medium";
+    font-size: 16px;
+`
+export const InputBlockImg = styled.View`
+    height: 111px;
+    padding: 16px;
+    background-color: #F5F3F3;
+    border-radius: 5px;
+    color: #33303E;
+    font-family: "MontserratAlternates_500Medium";
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+`
+export const InpBlockImgTxt = styled.Text`
     color: #33303E;
     font-family: "MontserratAlternates_500Medium";
     font-size: 16px;

@@ -1,4 +1,4 @@
-import { Container } from "../components/Container/Style";
+import { Container, ContainerScroll } from "../components/Container/Style";
 import { Button, ButtonTxt } from "../components/EntryButton/Style";
 import { ImgProfile } from "../components/ImgProfile/Style";
 import { BoxInput, BoxInputRow, DirectionRow, InputBlock, InputBodyRow, InputInsert } from "../components/Input/Style";
@@ -8,50 +8,52 @@ import { Subtitle, Title, TitleInput } from "../components/Title/Style";
 export const EditPatientProfile = () => {
     return (
         <Container>
-            {/* <ImgProfile source={require("../assets/img/paciente1.png")}/> */}
+            <ImgProfile source={require("../assets/img/paciente1.png")} />
 
             <Title> Richard Kosta </Title>
             <Subtitle> richard.kosta@gmail.com </Subtitle>
 
-            <BoxInput>
-                <TitleInput> Data de nascimento </TitleInput>
-                <InputInsert placeholder="Insira sua data de nascimento" />
-            </BoxInput>
+            <ContainerScroll>
+                <BoxInput>
+                    <TitleInput> Data de nascimento </TitleInput>
+                    <InputInsert placeholder="Insira sua data de nascimento" />
+                </BoxInput>
 
-            <BoxInput>
-                <TitleInput> CPF </TitleInput>
-                <InputInsert placeholder="Insira seu cpf" />
-            </BoxInput>
+                <BoxInput>
+                    <TitleInput> CPF </TitleInput>
+                    <InputInsert placeholder="Insira seu cpf" />
+                </BoxInput>
 
-            <BoxInput>
-                <TitleInput> Endereço </TitleInput>
-                <InputInsert placeholder="Insira seu endereço" />
-            </BoxInput>
+                <BoxInput>
+                    <TitleInput> Endereço </TitleInput>
+                    <InputInsert placeholder="Insira seu endereço" />
+                </BoxInput>
 
-            <DirectionRow>
-                <BoxInputRow>
-                    <TitleInput> Cep </TitleInput>
-                    <InputInsert placeholder="Data de nascimento" />
-                </BoxInputRow>
+                <DirectionRow>
+                    <BoxInputRow>
+                        <TitleInput> Cep </TitleInput>
+                        <InputInsert placeholder="Data de nascimento" />
+                    </BoxInputRow>
 
-                <BoxInputRow>
-                    <TitleInput> Cidade </TitleInput>
-                    <InputInsert placeholder="Cidade" />
-                </BoxInputRow>
-            </DirectionRow>
+                    <BoxInputRow>
+                        <TitleInput> Cidade </TitleInput>
+                        <InputInsert placeholder="Cidade" />
+                    </BoxInputRow>
+                </DirectionRow>
 
-            <Button>
-                <ButtonTxt> SALVAR </ButtonTxt>
-            </Button>
+                <Button>
+                    <ButtonTxt> SALVAR </ButtonTxt>
+                </Button>
 
-            <Button>
-                <ButtonTxt> EDITAR </ButtonTxt>
-            </Button>
+                <Button>
+                    <ButtonTxt> EDITAR </ButtonTxt>
+                </Button>
+            </ContainerScroll>
 
             <LinkCancel>
                 Cancelar
             </LinkCancel>
-        
+
         </Container>
     );
 }

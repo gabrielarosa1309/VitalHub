@@ -13,7 +13,15 @@ export const LinkCancel = styled(LinkMedium)`
     font-family: "MontserratAlternates_600SemiBold";
     color: #344F8F;
     margin-left: 0;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-decoration: underline;
+    align-self: center;
+`
+export const RedLinkCancel = styled.Text`
+    font-size: 16px;
+    font-family: "MontserratAlternates_600SemiBold";
+    color: #C81D25;
+    text-decoration: none;
     align-self: center;
 `
