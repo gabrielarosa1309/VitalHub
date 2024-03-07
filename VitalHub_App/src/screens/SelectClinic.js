@@ -1,10 +1,9 @@
 import { Container, ContainerScroll } from "../components/Container/Style"; import { Button, ButtonTxt } from "../components/EntryButton/Style";
 import { LinkCancel } from "../components/Links/Style";
-import { ListComponent } from "../components/List/List";
 import { SelectCard } from "../components/SelectCard/SelectCard";
 import { Title2 } from "../components/Title/Style";
 
-export const SelectClinic = () => {
+export const SelectClinic = ({ navigation }) => {
     return (
         <Container>
             <Title2> Selecionar clínica </Title2>
@@ -37,11 +36,11 @@ export const SelectClinic = () => {
                     disponibility="Seg-Sab"
                 />
 
-            <Button>
+            <Button onPress={() => navigation.navigate("SelectDoctor")}>
                 <ButtonTxt> CONTINUAR </ButtonTxt>
             </Button>
 
-            <LinkCancel>Cancelar</LinkCancel>
+            <LinkCancel onPress={() => navigation.replace("Main")}>Cancelar</LinkCancel>
 
         </Container>
     );

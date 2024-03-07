@@ -8,4 +8,5 @@ export const ImgProfile = styled.Image`
 
 export const ImgLocal = styled(ImgProfile)`
     height: 325px;
+    border-radius: 20px;
 `

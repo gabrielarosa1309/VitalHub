@@ -13,8 +13,7 @@ export const LinkCancel = styled(LinkMedium)`
     font-family: "MontserratAlternates_600SemiBold";
     color: #344F8F;
     margin-left: 0;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 20px 0px;
     text-decoration: underline;
     align-self: center;
 `

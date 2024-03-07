@@ -5,10 +5,12 @@ export const Container = styled.SafeAreaView`
     align-items: center;
     background-color: #FAFAFA;
 `
+export const ContainerLogin = styled(Container)`
+    gap: 20px;
+`
 export const ContainerUser = styled(Container)`
     justify-content: baseline;
 `
-
 export const ContainerScroll = styled.ScrollView.attrs({
     showsVerticalScrollIndicator: false,
     contentContainerStyle: {

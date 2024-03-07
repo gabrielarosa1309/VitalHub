@@ -4,7 +4,7 @@ import { Button, ButtonTxt } from "../components/EntryButton/Style";
 import { LinkCancel } from "../components/Links/Style";
 import { Title2 } from "../components/Title/Style";
 
-export const SelectDoctor = () => {
+export const SelectDoctor = ({ navigation }) => {
     return (
         <Container>
             <Title2> Selecionar médico </Title2>
@@ -27,11 +27,11 @@ export const SelectDoctor = () => {
                 doctorSpecialty="Clínico, Pediatra"
             />
 
-            <Button>
+            <Button onPress={() => navigation.navigate("SelectDate")}>
                 <ButtonTxt> CONTINUAR </ButtonTxt>
             </Button>
 
-            <LinkCancel>Cancelar</LinkCancel>
+            <LinkCancel onPress={() => navigation.navigate("SelectClinic")}>Cancelar</LinkCancel>
 
         </Container>
     );

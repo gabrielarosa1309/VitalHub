@@ -8,7 +8,7 @@ import { useState } from "react";
 import AppStatusModal from "../AppStatusModal/AppStatusModal";
 
 const AppResumeModal = ({
-    visible, setShowAppResume, ...rest
+    navigation, visible, setShowAppResume, ...rest
 }) => {
     const [showAppStatus, setShowAppStatus] = useState(false);
 
@@ -47,6 +47,7 @@ const AppResumeModal = ({
                     <AppStatusModal
                         visible={showAppStatus}
                         setShowAppStatus={setShowAppStatus}
+                        navigation={navigation}
                     />
 
                     <BtnModal onPress={() => setShowAppStatus(true)}>

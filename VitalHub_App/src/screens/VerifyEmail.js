@@ -6,7 +6,7 @@ import { LinkCancel } from "../components/Links/Style";
 import { Logo } from "../components/Logo/Style";
 import { Title } from "../components/Title/Style";
 
-export const VerifyEmail = () => {
+export const VerifyEmail = ({ navigation }) => {
     return (
         <Container>
             <Logo source={require("../assets/img/VitalHub_Logo1.png")} />
@@ -25,8 +25,8 @@ export const VerifyEmail = () => {
                 <InputVerify>0</InputVerify>
             </InputBoxVerify>
 
-            <ButtonReset>
-                <ButtonTxt> ENTRAR </ButtonTxt>
+            <ButtonReset onPress={() => navigation.navigate("SetPassword")}>
+                <ButtonTxt> Continuar </ButtonTxt>
             </ButtonReset>
 
             <LinkCancel>Reenviar código</LinkCancel>

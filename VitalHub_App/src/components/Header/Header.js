@@ -1,16 +1,17 @@
 import { View } from "react-native";
-import { BoxNotif, BoxUser, GradientBackground, HomeHeader, TextHome, TitleWhite, UserIcon } from "../Header/Style";
+import { BoxUser, GradientBackground, HomeHeader, TextHome, TitleWhite, UserIcon } from "../Header/Style";
 import { Octicons } from '@expo/vector-icons';
 
 export const Header = ({
     img,
-    name
+    name,
+    navigation
 }) => {
     return (
 
         <GradientBackground>
             <HomeHeader>
-                <BoxUser>
+                <BoxUser onPress={() => navigation.navigate("PatientProfile")}>
                     <UserIcon source={img} />
                     <View>
                         <TextHome>Bem-vindo</TextHome>
@@ -20,7 +21,7 @@ export const Header = ({
 
                 <Octicons
                     name="bell-fill"
-                    size={24}
+                    size={22}
                     color="white"
                 />
             </HomeHeader>

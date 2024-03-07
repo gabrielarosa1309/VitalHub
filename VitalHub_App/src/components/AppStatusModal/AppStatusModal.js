@@ -6,7 +6,7 @@ import { AppModal, BtnModalStatus, ModalContent } from "./Style";
 import { Octicons } from '@expo/vector-icons';
 
 const AppStatusModal = ({
-    visible, setShowAppStatus, setShowAppResume, setShowAppModal, ...rest
+    navigation, visible, setShowAppStatus, setShowAppResume, setShowAppModal, ...rest
 }) => {
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
@@ -21,7 +21,7 @@ const AppStatusModal = ({
                         color="#52de60"
                     />
 
-                    <BtnModalStatus onPress={() => setShowAppStatus(false)}>
+                    <BtnModalStatus onPress={() => navigation.replace("Main")}>
                         <ButtonTxt> Voltar para Home </ButtonTxt>
                     </BtnModalStatus>
                 </ModalContent>

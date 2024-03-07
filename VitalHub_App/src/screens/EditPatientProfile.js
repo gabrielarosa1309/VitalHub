@@ -5,13 +5,13 @@ import { BoxInput, BoxInputRow, DirectionRow, InputBlock, InputBodyRow, InputIns
 import { LinkCancel } from "../components/Links/Style";
 import { Subtitle, Title, TitleInput } from "../components/Title/Style";
 
-export const EditPatientProfile = () => {
+export const EditPatientProfile = ({ navigation }) => {
     return (
         <Container>
-            <ImgProfile source={require("../assets/img/paciente1.png")} />
+            <ImgProfile source={require("../assets/img/chewie.jpg")} />
 
-            <Title> Richard Kosta </Title>
-            <Subtitle> richard.kosta@gmail.com </Subtitle>
+            <Title> Chewie </Title>
+            <Subtitle> chewie@email.com </Subtitle>
 
             <ContainerScroll>
                 <BoxInput>
@@ -41,16 +41,13 @@ export const EditPatientProfile = () => {
                     </BoxInputRow>
                 </DirectionRow>
 
-                <Button>
+                <Button onPress={() => navigation.navigate("Main")}>
                     <ButtonTxt> SALVAR </ButtonTxt>
                 </Button>
 
-                <Button>
-                    <ButtonTxt> EDITAR </ButtonTxt>
-                </Button>
             </ContainerScroll>
 
-            <LinkCancel>
+            <LinkCancel onPress={() => navigation.navigate("Main")}>
                 Cancelar
             </LinkCancel>
 

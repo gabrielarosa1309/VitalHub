@@ -6,10 +6,12 @@ import SelectInput from "../components/SelectInput/SelectInput";
 import { Button, ButtonTxt } from "../components/EntryButton/Style";
 import { LinkCancel } from "../components/Links/Style";
 import { SelectBox } from "../components/AppointmentModal/Style";
+import AppResumeModal from "../components/AppResumeModal/AppResumeModal";
 
-export const SelectDate = () => {
+export const SelectDate = ({ navigation }) => {
     const [selectedDate, setSelectedDate] = useState();
     const [selectedTime, setSelectedTime] = useState();
+    const [showAppResume, setShowAppResume] = useState(false);
 
     const [avaliableTimesData, setAvaliableTimesData] = useState(['12:30', '14:00', '15:30', '16:00', '17:00']);
 
@@ -22,21 +24,28 @@ export const SelectDate = () => {
                 handleSelectedDateFn={setSelectedDate}
             />
 
-           
-                <TitleInputDate> Selecione um horário: </TitleInputDate>
 
-                <SelectInput
-                    defaultText='Selecionar horário'
-                    handleSelectedFn={setSelectedTime}
-                    data={avaliableTimesData}
-                />
-      
+            <TitleInputDate> Selecione um horário: </TitleInputDate>
 
-            <Button>
-                <ButtonTxt> CONTINUAR </ButtonTxt>
+            <SelectInput
+                defaultText='Selecionar horário'
+                handleSelectedFn={setSelectedTime}
+                data={avaliableTimesData}
+            />
+
+            <AppResumeModal
+                visible={showAppResume}
+                setShowAppResume={setShowAppResume}
+                navigation={navigation}
+            />
+
+            <Button onPress={() => setShowAppResume(true)}>
+                <ButtonTxt> Agendar </ButtonTxt>
             </Button>
 
-            <LinkCancel>Cancelar</LinkCancel>
+            <LinkCancel onPress={() => navigation.navigate("SelectDoctor")}>
+                Cancelar
+            </LinkCancel>
         </Container>
     )
 }

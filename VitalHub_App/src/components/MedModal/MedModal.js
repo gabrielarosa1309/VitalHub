@@ -6,7 +6,7 @@ import { ButtonTxt } from "../EntryButton/Style";
 import { LinkCancel } from "../Links/Style";
 
 const MedModal = ({
-    visible, setShowMedModal, ...rest
+    navigation, visible, setShowMedModal, ...rest
 }) => {
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
@@ -22,7 +22,7 @@ const MedModal = ({
                         <ContentTxt>CRM-15286</ContentTxt>
                     </ProfileData>
 
-                    <BtnModal>
+                    <BtnModal onPress={() => navigation.navigate("Localization")}>
                         <ButtonTxt> Ver local da consulta </ButtonTxt>
                     </BtnModal>
 

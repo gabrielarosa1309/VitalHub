@@ -103,25 +103,30 @@ const CalendarList = () => {
       alignSelf : 'flex-start',
       color : '#4E4B59',
       fontFamily: "MontserratAlternates_600SemiBold",
-      paddingHorizontal: 16
+      paddingHorizontal: 16,
+      marginLeft: 20
     },
     nameDateStyle : {
       color: "#ACABB7",
+      fontFamily: "MontserratAlternates_600SemiBold",
       fontSize: 12,
       textTransform : 'capitalize'
     },
     numberDateStyle : {
       color: "#5F5C6B",
+      fontFamily: "MontserratAlternates_600SemiBold",
       fontSize: 16
     },
     selectedDateNameStyle : {
       color: "white",
       fontSize: 12,
+      fontFamily: "MontserratAlternates_600SemiBold",
       fontWeight: "bold",
       textTransform : 'capitalize'
     },
     selectedDateNumberStyle : {
       color: "white",
+      fontFamily: "MontserratAlternates_600SemiBold",
       fontSize: 14
     },
     selectedContainerStyle : {

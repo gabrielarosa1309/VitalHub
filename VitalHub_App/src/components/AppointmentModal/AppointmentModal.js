@@ -11,10 +11,15 @@ import AppResumeModal from "../AppResumeModal/AppResumeModal";
 import {InputInsert } from "../Input/Style";
 
 const AppointmentModal = ({
-    visible, setShowModalApp, ...rest
+    navigation, visible, setShowModalApp, ...rest
 }) => {
-    const [statusLista, setStatusLista] = useState("pendente");
+    const [statusLista, setStatusLista] = useState("exame");
     const [showAppResume, setShowAppResume] = useState(false);
+
+    async function handleClose( screen ) {
+        await setShowModalApp(false)
+        navigation.replace(screen)
+    }
 
     return (
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
@@ -27,22 +32,22 @@ const AppointmentModal = ({
                         <TitleInput> Qual é o nível da consulta? </TitleInput>
                         <ButtonRowAppointment>
                             <AppButton
-                                textButton={"Agendadas"}
-                                clickButton={statusLista === "pendente"}
-                                onPress={() => setStatusLista("pendente")}
+                                textButton={"Exame"}
+                                clickButton={statusLista === "exame"}
+                                onPress={() => setStatusLista("exame")}
                             />
 
                             <AppButton
-                                textButton={"Realizadas"}
-                                clickButton={statusLista === "realizado"}
-                                onPress={() => setStatusLista("realizado")}
+                                textButton={"Rotina"}
+                                clickButton={statusLista === "rotina"}
+                                onPress={() => setStatusLista("rotina")}
                             />
 
 
                             <AppButton
-                                textButton={"Canceladas"}
-                                clickButton={statusLista === "cancelado"}
-                                onPress={() => setStatusLista("cancelado")}
+                                textButton={"Urgência"}
+                                clickButton={statusLista === "urgencia"}
+                                onPress={() => setStatusLista("urgencia")}
                             />
                         </ButtonRowAppointment>
                     </SelectBox>
@@ -69,9 +74,10 @@ const AppointmentModal = ({
                     <AppResumeModal
                         visible={showAppResume}
                         setShowAppResume={setShowAppResume}
+                        navigation={navigation}
                     />
 
-                    <BtnModal onPress={() => setShowAppResume(true)}>
+                    <BtnModal onPress={() => handleClose("SelectClinic")}>
                         <ButtonTxt> Confirmar </ButtonTxt>
                     </BtnModal>
 

@@ -4,14 +4,16 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 export const HomeHeader = styled.View`
   width:  100%;
-  height: 144px;
+  height: 175px;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   gap: 160px;
 `
 
-export const BoxUser = styled.View`
+export const BoxUser = styled.TouchableOpacity.attrs({
+  activeOpacity: 1
+})`
   gap: 10px;
   flex-direction: row;
   align-items: center;

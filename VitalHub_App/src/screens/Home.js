@@ -17,7 +17,7 @@ const Consultas = [
     { id: 8, situacao: "cancelado" }
 ]
 
-export const Home = () => {
+export const Home = ({ navigation }) => {
 
     const [statusLista, setStatusLista] = useState("pendente");
 
@@ -31,6 +31,7 @@ export const Home = () => {
             <Header
                 img={require("../assets/img/chewie.jpg")}
                 name="Chewie"
+                navigation={navigation}
             />
 
             <CalendarList />
@@ -69,6 +70,7 @@ export const Home = () => {
                             situacao={item.situacao}
                             onPressMedModal={() => setShowMedModal(true)}
                             onPressCancel={() => setShowModalCancel(true)}
+                            navigation={navigation}
                         />
                     )
                 }
@@ -84,11 +86,13 @@ export const Home = () => {
             <MedModal
                 visible={showMedModal}
                 setShowMedModal={setShowMedModal}
+                navigation={navigation}
             />
 
             <AppointmentModal
                 visible={showModalApp}
                 setShowModalApp={setShowModalApp}
+                navigation={navigation}
             />
 
         </Container>

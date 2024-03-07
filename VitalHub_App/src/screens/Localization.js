@@ -1,9 +1,10 @@
 import { Container } from "../components/Container/Style";
 import { ImgLocal } from "../components/ImgProfile/Style";
 import { BoxInput, BoxInputRow, DirectionRow, InputBlock, InputBodyRow } from "../components/Input/Style";
+import { LinkCancel } from "../components/Links/Style";
 import { Subtitle, Title, TitleInput } from "../components/Title/Style";
 
-export const Localization = () => {
+export const Localization = ({ navigation }) => {
     return (
         <Container>
             <ImgLocal source={require("../assets/img/local.png")} />
@@ -27,6 +28,10 @@ export const Localization = () => {
                     <InputBodyRow>Moema-SP</InputBodyRow>
                 </BoxInputRow>
             </DirectionRow>
+
+            <LinkCancel onPress={() => navigation.replace("Main")}>
+                Cancelar
+            </LinkCancel>
         </Container>
     );
 }

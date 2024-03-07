@@ -4,18 +4,18 @@ import { ImgProfile } from "../components/ImgProfile/Style";
 import { BoxInput, BoxInputRow, DirectionRow, InputBlock, InputBodyRow } from "../components/Input/Style";
 import { Subtitle, Title, TitleInput } from "../components/Title/Style";
 
-export const PatientProfile = () => {
+export const PatientProfile = ({ navigation }) => {
     return (
         <Container>
-            <ImgProfile source={require("../assets/img/paciente1.png")} />
+            <ImgProfile source={require("../assets/img/chewie.jpg")} />
 
-            <Title> Richard Kosta </Title>
-            <Subtitle> richard.kosta@gmail.com </Subtitle>
+            <Title> Chewie </Title>
+            <Subtitle> chewie@email.com </Subtitle>
 
             <ContainerScroll>
                 <BoxInput>
                     <TitleInput> Data de nascimento </TitleInput>
-                    <InputBlock> 04/05/1999 </InputBlock>
+                    <InputBlock> 08/08/2018 </InputBlock>
                 </BoxInput>
 
                 <BoxInput>
@@ -25,26 +25,22 @@ export const PatientProfile = () => {
 
                 <BoxInput>
                     <TitleInput> Endereço </TitleInput>
-                    <InputBlock> Rua Vicenso Silva, 987 </InputBlock>
+                    <InputBlock> Rua Luis Ântico, 623 </InputBlock>
                 </BoxInput>
 
                 <DirectionRow>
                     <BoxInputRow>
                         <TitleInput> Cep </TitleInput>
-                        <InputBodyRow>06548-909</InputBodyRow>
+                        <InputBodyRow>09360-610</InputBodyRow>
                     </BoxInputRow>
 
                     <BoxInputRow>
                         <TitleInput> Cidade </TitleInput>
-                        <InputBodyRow>Moema-SP</InputBodyRow>
+                        <InputBodyRow>Mauá-SP</InputBodyRow>
                     </BoxInputRow>
                 </DirectionRow>
 
-                <Button>
-                    <ButtonTxt> SALVAR </ButtonTxt>
-                </Button>
-
-                <Button>
+                <Button onPress={() => navigation.navigate("EditPatientProfile")}>
                     <ButtonTxt> EDITAR </ButtonTxt>
                 </Button>
 

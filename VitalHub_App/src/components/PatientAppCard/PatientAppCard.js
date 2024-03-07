@@ -20,6 +20,7 @@ export const PatientAppCard = ({
   situacao = "pendente",
   onPressCancel,
   onPressMedModal,
+  navigation
 }) => {
   const [showMedModal, setShowMedModal] = useState(false);
 
@@ -74,7 +75,7 @@ export const PatientAppCard = ({
                 <ButtonText situacao={situacao}>Cancelar</ButtonText>
               </ButtonCard>
             ) : (
-              <ButtonCard onPress={onPressMedModal}>
+              <ButtonCard onPress={() => navigation.navigate("PatientVisuRecord")}>
                 <ButtonText situacao={situacao}>Ver Prontuário</ButtonText>
               </ButtonCard>
             )

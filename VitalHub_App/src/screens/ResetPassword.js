@@ -5,7 +5,7 @@ import { Input } from "../components/Input/Style";
 import { Logo } from "../components/Logo/Style";
 import { Title } from "../components/Title/Style";
 
-export const ResetPassword = () => {
+export const ResetPassword = ({ navigation }) => {
     return (
         <Container>
             <Logo source={require("../assets/img/VitalHub_Logo1.png")} />
@@ -18,7 +18,7 @@ export const ResetPassword = () => {
 
             <Input placeholder="Usuário ou E-mail" />
 
-            <ButtonReset>
+            <ButtonReset onPress={() => navigation.navigate("VerifyEmail")}>
                 <ButtonTxt> CONTINUAR </ButtonTxt>
             </ButtonReset>
         </Container>

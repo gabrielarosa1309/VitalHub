@@ -10,7 +10,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { ImgProfile } from "../components/ImgProfile/Style";
 
-export const PatientVisuRecord = () => {
+export const PatientVisuRecord = ({ navigation }) => {
     return (
         <ContainerUser>
 
@@ -78,7 +78,7 @@ export const PatientVisuRecord = () => {
                 </BoxInput>
             </ContainerScroll>
 
-            <LinkCancel>
+            <LinkCancel onPress={() => navigation.replace("Main")}>
                 Voltar
             </LinkCancel>
         </ContainerUser>
