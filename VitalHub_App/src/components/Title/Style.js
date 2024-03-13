@@ -30,3 +30,6 @@ export const Title2 = styled(Title)`
 export const CardTitle = styled(Title)`
     font-size: 18px;
 `
+export const TitleLocation = styled(Title)`
+    margin-top: 40px;
+`

@@ -20,7 +20,7 @@ import { Quicksand_400Regular, Quicksand_500Medium, Quicksand_600SemiBold, Quick
 import SelectDate from "./src/screens/SelectDate";
 import HomeMed from "./src/screens/HomeMed";
 import InsertMedRecord from "./src/screens/InsertMedRecord";
-import Localization from "./src/screens/Localization";
+import Location from "./src/screens/Location";
 import MedPatientRecord from "./src/screens/MedPatientRecord";
 import EditPatientProfile from "./src/screens/EditPatientProfile";
 import PatientVisuRecord from "./src/screens/PatientVisuRecord";
@@ -135,9 +135,9 @@ export default function App() {
         />
 
         <Stack.Screen
-          name="Localization" //nome da tela
-          component={Localization} //componente q será chamado
-          options={{ title: 'Localization' }} //titulo da tela
+          name="Location" //nome da tela
+          component={Location} //componente q será chamado
+          options={{ title: 'Location' }} //titulo da tela
         />
 
         <Stack.Screen

@@ -6,7 +6,11 @@ export const Container = styled.SafeAreaView`
     background-color: #FAFAFA;
 `
 export const ContainerLogin = styled(Container)`
+    justify-content: center;
     gap: 20px;
+`
+export const Container2 = styled(Container)`
+    justify-content: center;
 `
 export const ContainerUser = styled(Container)`
     justify-content: baseline;

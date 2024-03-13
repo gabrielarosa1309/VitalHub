@@ -1,4 +1,4 @@
-import { Container } from "../components/Container/Style";
+import { Container2 } from "../components/Container/Style";
 import { DefaultText, TextBox } from "../components/DefaultText/Style";
 import { ButtonReset, ButtonTxt } from "../components/EntryButton/Style";
 import { Input } from "../components/Input/Style";
@@ -7,7 +7,7 @@ import { Title } from "../components/Title/Style";
 
 export const ResetPassword = ({ navigation }) => {
     return (
-        <Container>
+        <Container2>
             <Logo source={require("../assets/img/VitalHub_Logo1.png")} />
 
             <Title> Recuperar senha </Title>
@@ -21,7 +21,7 @@ export const ResetPassword = ({ navigation }) => {
             <ButtonReset onPress={() => navigation.navigate("VerifyEmail")}>
                 <ButtonTxt> CONTINUAR </ButtonTxt>
             </ButtonReset>
-        </Container>
+        </Container2>
     );
 }
 export default ResetPassword;

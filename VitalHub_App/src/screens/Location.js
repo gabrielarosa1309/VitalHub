@@ -2,14 +2,16 @@ import { Container } from "../components/Container/Style";
 import { ImgLocal } from "../components/ImgProfile/Style";
 import { BoxInput, BoxInputRow, DirectionRow, InputBlock, InputBodyRow } from "../components/Input/Style";
 import { LinkCancel } from "../components/Links/Style";
-import { Subtitle, Title, TitleInput } from "../components/Title/Style";
+import { Map } from "../components/Map/Map";
+import { Subtitle, Title, TitleInput, TitleLocation } from "../components/Title/Style";
 
-export const Localization = ({ navigation }) => {
+export const Location = ({ navigation }) => {
     return (
+        
         <Container>
-            <ImgLocal source={require("../assets/img/local.png")} />
+            <Map/>
 
-            <Title> Clínica Natureh </Title>
+            <TitleLocation> Clínica Natureh </TitleLocation>
             <Subtitle> São Paulo, SP </Subtitle>
 
             <BoxInput>
@@ -36,4 +38,4 @@ export const Localization = ({ navigation }) => {
     );
 }
 
-export default Localization;
+export default Location;

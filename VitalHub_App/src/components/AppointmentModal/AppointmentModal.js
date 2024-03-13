@@ -56,20 +56,6 @@ const AppointmentModal = ({
                         <TitleInput> Informe a localização </TitleInput>
                         <InputInsert placeholder="Digite a localização" />
                     </SelectBox>
-{/* 
-                    <SelectBox>
-                        <TitleInput> Informe o médico </TitleInput>
-                        <Select>
-                            <SelectTitle> Selecionar médico </SelectTitle>
-                        </Select>
-                    </SelectBox>
-
-                    <SelectBox>
-                        <TitleInput> Informe a data e o horário </TitleInput>
-                        <Select>
-                            <SelectTitle> Selecionar data e horário </SelectTitle>
-                        </Select>
-                    </SelectBox> */}
 
                     <AppResumeModal
                         visible={showAppResume}
