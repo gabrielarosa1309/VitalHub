@@ -19,11 +19,11 @@ export const PatientVisuRecord = ({ navigation }) => {
     return (
         <ContainerScroll>
             <ContainerUser>
-    
+
                 <ImgProfile source={require("../assets/img/medico4.jpg")} />
-    
+
                 <Title> Dr. Claudio </Title>
-    
+
                 <ProfileData>
                     <ContentTxt>Clínico geral</ContentTxt>
                     <ContentTxt>CRM-15286</ContentTxt>
@@ -35,12 +35,12 @@ export const PatientVisuRecord = ({ navigation }) => {
                             ouvido. Necessário repouse de 2 dias
                             e acompanhamento médico constante </InputBlock>
                     </BoxInput>
-    
+
                     <BoxInput>
                         <TitleInput> Diagnóstico do paciente </TitleInput>
                         <InputBlock> Infecção no ouvido </InputBlock>
                     </BoxInput>
-    
+
                     <BoxInput>
                         <TitleInput> Prescrição medica </TitleInput>
                         <InputBlock> Medicamento: Advil
@@ -48,7 +48,7 @@ export const PatientVisuRecord = ({ navigation }) => {
                             Frequência: 3 vezes ao dia
                             Duração: 3 dias </InputBlock>
                     </BoxInput>
-    
+
                     <BoxInput>
                         <TitleInput> Exames médicos </TitleInput>
                         <InputBlockImg>
@@ -60,7 +60,7 @@ export const PatientVisuRecord = ({ navigation }) => {
                             <InpBlockImgTxt>Nenhuma foto informada</InpBlockImgTxt>
                         </InputBlockImg>
                     </BoxInput>
-    
+
                     <RowButtonVisu>
                         <View style={{ width: "50%" }}>
                             <ButtonVisu>
@@ -72,23 +72,23 @@ export const PatientVisuRecord = ({ navigation }) => {
                                 <ButtonVisuTxt>Enviar</ButtonVisuTxt>
                             </ButtonVisu>
                         </View>
-    
+
                         <View style={{ width: "50%", alignContent: "center", justifyContent: "center" }}>
                             <RedLinkCancel> Cancelar </RedLinkCancel>
                         </View>
                     </RowButtonVisu>
-    
+
                     <BoxInput>
                         <TitleInput> Resultado de análises clínicas </TitleInput>
                         <InputBlock> Sangue: tudo normal </InputBlock>
                     </BoxInput>
                 </ContainerScroll>
-    
+
                 <LinkCancel onPress={() => navigation.replace("Main")}>
                     Voltar
                 </LinkCancel>
             </ContainerUser>
-    
+
             <CameraModal
                 visible={showCameraModal}
                 setUriCameraCapture={setUriCameraCapture}
