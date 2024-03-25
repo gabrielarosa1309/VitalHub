@@ -1,12 +1,24 @@
 import { View } from "react-native";
 import { BoxUser, GradientBackground, HomeHeader, TextHome, TitleWhite, UserIcon } from "../Header/Style";
 import { Octicons } from '@expo/vector-icons';
+import { userDecodeToken } from "../../utils/Auth";
+import { useEffect } from "react";
 
 export const Header = ({
     img,
     name,
     navigation
 }) => {
+
+    async function profileLoad() {
+        const token = await userDecodeToken();
+        console.log(token)
+    }
+
+    useEffect(() => {
+        profileLoad();
+    }, [])
+
     return (
 
         <GradientBackground>

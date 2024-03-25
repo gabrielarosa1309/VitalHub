@@ -1,10 +1,17 @@
 import { Container, ContainerScroll } from "../components/Container/Style";
-import { Button, ButtonTxt } from "../components/EntryButton/Style";
+import { Button, ButtonTxt, ExitButton } from "../components/EntryButton/Style";
 import { ImgProfile } from "../components/ImgProfile/Style";
 import { BoxInput, BoxInputRow, DirectionRow, InputBlock, InputBodyRow } from "../components/Input/Style";
 import { Subtitle, Title, TitleInput } from "../components/Title/Style";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 
 export const PatientProfile = ({ navigation }) => {
+    
+    async function logout() {
+        await AsyncStorage.removeItem('token');
+        navigation.navigate("Login")
+    }
+
     return (
         <Container>
             <ImgProfile source={require("../assets/img/chewie.jpg")} />
@@ -43,6 +50,10 @@ export const PatientProfile = ({ navigation }) => {
                 <Button onPress={() => navigation.navigate("EditPatientProfile")}>
                     <ButtonTxt> EDITAR </ButtonTxt>
                 </Button>
+
+                <ExitButton onPress={() => logout()}>
+                    <ButtonTxt> Sair </ButtonTxt>
+                </ExitButton>
 
             </ContainerScroll>
 
